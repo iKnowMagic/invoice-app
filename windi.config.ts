@@ -10,9 +10,9 @@ export default defineConfig({
       base: '16px'
     },
     fontFamily: {
-      sans: ['Kumbh Sans', 'sans-serif'],
-      serif: ['Roboto Slab', 'serif'],
-      mono: ['Space Mono', 'monospace']
+      sans: ['Spartan', 'sans-serif'],
+      serif: ['Spartan', 'serif'],
+      mono: ['Spartan', 'monospace']
     },
 
     colors: {
@@ -23,14 +23,18 @@ export default defineConfig({
       'blue-gray': colors.blueGray,
       design: {
         theme: 'var(--theme-color)',
-        '1': '#F87070',
-        '2': '#70F3F8',
-        '3': '#D881F8',
-        '4': '#D7E0FF',
-        '5': '#1E213F',
-        '6': '#FFFFFF',
-        '7': '#EFF1FA',
-        '8': '#161932'
+        '1': '#7C5DFA',
+        '2': '#9277FF',
+        '3': '#1E2139',
+        '4': '#252945',
+        '5': '#DFE3FA',
+        '6': '#888EB0',
+        '7': '#7E88C3',
+        '8': '#0C0E16',
+        '9': '#EC5757',
+        '10': '#FF9797',
+        '11': '#F8F8FB',
+        '12': '#141625'
       }
     }
   }
