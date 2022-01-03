@@ -20,6 +20,8 @@ export default defineConfig({
       dark: colors.dark,
       'blue-gray': colors.blueGray,
       design: {
+        header: '#373B53',
+        divider: '#494E6E',
         theme: 'var(--theme-color)',
         '1': '#7C5DFA',
         '2': '#9277FF',

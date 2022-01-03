@@ -1,5 +1,5 @@
 import MainLayout from '@/layouts/MainLayout.vue'
-import Home from '@/pages/Home.vue'
+import Home from '@/pages/MainPage.vue'
 import NotFound from '@/pages/NotFound.vue'
 
 export default [

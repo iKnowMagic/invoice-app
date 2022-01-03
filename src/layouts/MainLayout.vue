@@ -1,20 +1,30 @@
 <template>
   <div class="w-full h-full font-sans dark:bg-design-3">
+    <main-header />
     <router-view></router-view>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, provide } from 'vue'
+import { defineComponent, onMounted, provide, watch } from 'vue'
 
 import { useBreakpoints, useDark } from '@vueuse/core'
+
+import { useThemeStore } from '@/store'
+
+import MainHeader from '@/components/MainHeader'
 
 // @ts-expect-error js breakpoints
 import bkpoints from '../../windi.breakpoints'
 
 export default defineComponent({
   name: 'MainLayout',
+  components: {
+    MainHeader
+  },
   setup() {
+    const themeStore = useThemeStore()
+
     const breakpoints = useBreakpoints(bkpoints)
     const sm = breakpoints.smaller('md')
     const md = breakpoints.between('md', 'lg')
@@ -30,7 +40,11 @@ export default defineComponent({
     })
 
     onMounted(() => {
-      isDark.value = false
+      isDark.value = themeStore.darkMode
+    })
+
+    watch(themeStore, () => {
+      isDark.value = themeStore.darkMode
     })
   }
 })
